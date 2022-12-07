@@ -1,0 +1,278 @@
+/*Para la entrada de Bienvenida*//*Para la entrada de Bienvenida*/
+.spinner {
+ height: 50px;
+ width: max-content;
+ font-size: 35px;
+ font-weight: 600;
+ font-family: monospace;
+ letter-spacing: 1em;
+ color: #82EC24;
+ filter: drop-shadow(0 0 10px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.spinner span {
+ animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+ animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+ animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+ animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+ animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+ animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+ animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+ 0%, 100% {
+  transform: translateY(0);
+ }
+
+ 50% {
+  transform: translateY(-10px);
+ }
+}/*Cierre de  Bienvenida*/
+
+/*Para el TITULO*/
+.loader {
+  position: relative;
+}
+
+.loader h1 span {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 58px;
+  letter-spacing: 5px;
+}
+
+.loader h1 span:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.3px rgb(130,236,36);
+}
+
+.loader h1 span:nth-child(2) {
+  color: rgb(128, 198, 255);
+  -webkit-text-stroke: 1px rgb(128, 198, 255);
+  animation: uiverse723 3s ease-in-out infinite;
+}
+
+@keyframes uiverse723 {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+     54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+     51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}/*Fin del Titulo*/
+
+/*barra de Navegacion*/
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D81FD0;
+    font-size: 20px;
+}
+
+aside ul li {
+    float: left;
+}
+
+aside ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+aside ul li a:hover {
+    background-color: #111;
+}/*Fin de barra de Navegacion*/
+/*Fondo del Body*/
+/*.font {
+    background-color: #990033;
+}*/
+html {
+  height: 100%;
+  background: #223;
+  display: grid;
+ /* place-items: center;*/
+}
+
+.box {
+  --border-size: 6px;
+  --border-angle: 0turn;
+  width: 100%;
+ height: 100%;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+/*Fin del Body*/
+
+/*Para la targeta*/
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cuerpo .card {
+    position: relative;
+    width: 20rem;
+    height: 18.5rem;
+    margin: 1rem;
+}
+.card {
+  overflow: visible;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -99;
+}
+
+.details {
+  position: absolute;
+  left: -10px;
+  right: 0;
+  bottom: 5px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Image*/
+.imgbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.img {
+  background: #4158D0;
+  background-image: linear-gradient(45deg, #4158D0, #C850C0);
+  position: absolute;
+  top: 0;
+  lt: 0;
+  width: 100%;
+  height: 100%;eft: 0;
+  width: 100%;
+  height: 100%;
+}
+.img img{
+  position: absolute;
+top: 0;
+  lt: 0;
+  width: 100%;
+  height: 100%;eft: 0;
+  width: 100%;
+  height: 100%;  
+}
+
+/*Text*/
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffff00;
+  display: block;
+  margin-top: 25px;
+}
+
+/*Hover*/
+.card:hover .imgbox {
+  bottom: 80px;
+}
+
+.card:hover:before {
+  transform: rotate(20deg);
+}
+
+.card:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}/*Fin de la targeta*/
+
+
+
